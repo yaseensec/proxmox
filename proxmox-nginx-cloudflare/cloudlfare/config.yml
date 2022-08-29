@@ -1,0 +1,11 @@
+tunnel: ff4a9c19-4767-4d18-add8-d27b9c2c5e4e
+credentials-file: /home/yaseen/.cloudflared/ff4a9c19-4767-4d18-add8-d27b9c2c5e4e.json
+warp-routing:
+  enabled: true
+ingress:
+ - hostname: darkrose.yaseenins.com
+   service: https://darkrose.yaseenins.com:443
+     #originRequest:
+     #noTLSVerify: true
+     #originServerName: localhost
+ - service: http_status:404
