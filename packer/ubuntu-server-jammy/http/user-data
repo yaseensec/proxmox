@@ -13,6 +13,7 @@ autoinstall:
   packages:
     - qemu-guest-agent
     - sudo
+    - vim
   storage:
     layout:
       name: direct

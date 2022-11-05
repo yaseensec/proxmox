@@ -28,13 +28,13 @@ source "proxmox" "ubuntu-server-jammy" {
     
     # VM General Settings
     node = "darkrose"
-    vm_id = "200"
+    vm_id = "100"
     vm_name = "ubuntu-server-jammy"
     template_description = "Ubuntu Server jammy Image"
 
     # VM OS Settings
     # (Option 1) Local ISO File
-    iso_file = "local:iso/ubuntu-22.04.1-live-server-amd64.iso"
+    iso_file = "Dark:iso/ubuntu-22.04.1-live-server-amd64.iso"
     # - or -
     # (Option 2) Download ISO
     # iso_url = "https://releases.ubuntu.com/22.04/ubuntu-22.04-live-server-amd64.iso"
@@ -88,7 +88,7 @@ source "proxmox" "ubuntu-server-jammy" {
     # PACKER Autoinstall Settings
     http_directory = "http" 
     # (Optional) Bind IP Address and Port
-    http_bind_address = "192.168.0.225"
+    http_bind_address = "192.168.0.40"
     http_port_min = 8802
     http_port_max = 8802
 
@@ -101,7 +101,7 @@ source "proxmox" "ubuntu-server-jammy" {
     ssh_private_key_file = "~/Documents/ssh-keys/id_ed25519"
 
     # Raise the timeout, when installation takes longer
-    ssh_timeout = "10m"
+    ssh_timeout = "20m"
 }
 
 # Build Definition to create the VM Template
