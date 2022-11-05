@@ -29,21 +29,21 @@ provider "proxmox" {
 }
 
 module Masters{
-  source = "./node"
+  source = "./master"
   no_of_vm = 2
-  vm_name = "Master"
-  vm_id = "40" 
+  vm_name = "Ubuntu-Master"
+  vm_id = "10" 
   target_node = "darkrose" 
   clone_template = "ubuntu-server-jammy"
   cpu_cores = "1"
   cpu_sockets = "1"
-  ram = "2048"
-  ipaddr = "192.168.0.12"
+  ram = "1024"
+  ipaddr = "192.168.0.10"
   cidr = "24"
   gateway = "192.168.0.1"
   dnsserver = "192.168.0.1"
   user = "yaseen"
-  password = "MTIzNAo="
+  password = "1234"
   sshkey = <<EOF
      ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIA0Mrz/2CXLoD3i5oHsLCEdVQrfGzKUDAgJumLLUKmnx yaseen@Entropy
     EOF
@@ -51,21 +51,21 @@ module Masters{
 
 module Nodes{
   source = "./node"
-  no_of_vm = 2
-  vm_name = "Node"
-  vm_id = "50" 
+  no_of_vm = 3
+  vm_name = "Ubuntu-Node"
+  vm_id = "11" 
   target_node = "darkrose" 
   clone_template = "ubuntu-server-jammy"
   cpu_cores = "1"
   cpu_sockets = "1"
-  ram = "2048"
-  ipaddr = "192.168.0.13"
+  ram = "3096"
+  ipaddr = "192.168.0.11"
   cidr = "24"
   gateway = "192.168.0.1"
   dnsserver = "192.168.0.1"
-  user = "yaseen"
-  password = "MTIzNAo="
-  sshkey = <<EOF
-     ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIA0Mrz/2CXLoD3i5oHsLCEdVQrfGzKUDAgJumLLUKmnx yaseen@Entropy
-    EOF
+   user = "yaseen"
+   password = "1234"
+   sshkey = <<EOF
+      ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIA0Mrz/2CXLoD3i5oHsLCEdVQrfGzKUDAgJumLLUKmnx yaseen@Entropy
+     EOF
 }
