@@ -1,0 +1,22 @@
+---
+
+packages: 
+  redhat_install:
+    - cloud-init
+    - tar
+    - telnet
+    - tcptraceroute
+    - zip
+    - unzip
+    - bzip2
+    - vim
+    - curl
+    - wget
+    - strace
+    - qemu-guest-agent 
+    - cloud-utils-growpart 
+    - gdisk
+  redhat_remove:
+    - iwl*s
+    - linux-firmware
+    - avahi\*

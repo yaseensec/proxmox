@@ -1,0 +1,19 @@
+---
+
+- name: Install packages - RedHat
+  yum:
+    name: "{{ packages.redhat_install }}"
+    state: present
+  when: ansible_facts['os_family'] == "RedHat"
+
+- name: Remove packages - RedHat
+  yum:
+    name: "{{ packages.redhat_remove }}"
+    state: absent
+  when: ansible_facts['os_family'] == "RedHat"
+
+- name: Update all packages - RedHat
+  yum:
+    name: "*"
+    state: latest
+  when: ansible_facts['os_family'] == "RedHat"
