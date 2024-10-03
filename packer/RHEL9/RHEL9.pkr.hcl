@@ -113,6 +113,7 @@ build {
     # Provisioning the VM Template for Cloud-Init Integration in Proxmox #1
     provisioner "ansible" {
       playbook_file = "ansible/playbook.yml"
+      user = "darkrose"
       extra_arguments = [ "--scp-extra-args", "'-O'" ]
     }
 

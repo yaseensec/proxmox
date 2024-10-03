@@ -66,7 +66,7 @@ mkdir -p /home/darkrose/.ssh
 echo "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIA0Mrz/2CXLoD3i5oHsLCEdVQrfGzKUDAgJumLLUKmnx darkrose@yaseenins" > /home/darkrose/.ssh/authorized_keys
 chmod 700 /home/darkrose/.ssh
 chmod 600 /home/darkrose/.ssh/authorized_keys
-chown -R darkrose:darkrose /home/dark/.ssh
+chown -R darkrose:darkrose /home/darkrose/.ssh
 
 mkdir -p /root/.ssh
 echo "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIA0Mrz/2CXLoD3i5oHsLCEdVQrfGzKUDAgJumLLUKmnx darkrose@yaseenins" > /root/.ssh/authorized_keys

@@ -1,6 +1,6 @@
 - name: Apply RHEL 9 templates configuration
   hosts: default
-  remote_user: root
+  #remote_user: root
   gather_facts: true
   become: true
   roles:
